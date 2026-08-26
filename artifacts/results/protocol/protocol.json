@@ -1,0 +1,109 @@
+{
+  "conditions": [
+    "lipo_random",
+    "lipo_scaffold",
+    "caco2_random",
+    "caco2_scaffold",
+    "cond7",
+    "amylase",
+    "hydro"
+  ],
+  "design": "scrambled Latin hypercube",
+  "features": {
+    "morgan_bits": 2048,
+    "morgan_radius": 2,
+    "protein_pad": "right_zero_allzero_rows",
+    "protein_vocab": "ARNDCQEGHILKMFPSTWYVXU"
+  },
+  "n_candidates": 48,
+  "phase1a_reps": {
+    "amylase": 20,
+    "caco2_random": 20,
+    "caco2_scaffold": 20,
+    "cond7": 20,
+    "hydro": 30,
+    "lipo_random": 30,
+    "lipo_scaffold": 30
+  },
+  "phase1b": {
+    "budget": 48,
+    "conditions": [
+      "cond7",
+      "hydro"
+    ],
+    "methods": [
+      "random_val",
+      "tpe_val",
+      "hebo_val",
+      "tpe_fg_mo",
+      "hebo_fg_mo",
+      "tpe_hess_mo",
+      "hebo_hess_mo"
+    ],
+    "primary_comparison": "tpe_fg_mo vs tpe_val",
+    "reps": 10
+  },
+  "primary_metric": "paired delta OOD loss",
+  "proxy": {
+    "batch_size": 64,
+    "cap": 1024,
+    "eval_mode": true,
+    "multiple_of_batch": true,
+    "shuffle": false
+  },
+  "search_space": {
+    "depth": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "dropout": [
+      0.0,
+      0.5
+    ],
+    "lr": [
+      0.0001,
+      0.003
+    ],
+    "wd_zero_frac": 0.2,
+    "weight_decay": [
+      1e-06,
+      0.01
+    ],
+    "width": [
+      64,
+      128,
+      256,
+      512
+    ]
+  },
+  "seeds": "base=10000*outer_run; +1 split, +2 hp, +3 init, +4 loader, +5 proxy, +6 sampler",
+  "signals": {
+    "hessian": {
+      "method": "power_iteration_hvp",
+      "n_iter": 30,
+      "tol": 0.001
+    },
+    "primary": "fg_legacy",
+    "secondary": [
+      "fg_penult",
+      "hess_top"
+    ]
+  },
+  "study": "ICBINB-BIO 2026 \u2014 model selection under biological shift",
+  "training": {
+    "activation": "relu",
+    "batch_size": 64,
+    "diag_epochs": [
+      25,
+      50
+    ],
+    "early_stopping": false,
+    "epochs": 100,
+    "loss": "mse",
+    "optimizer": "Adam(coupled L2 weight_decay)",
+    "precision": "fp32",
+    "scheduler": null
+  }
+}

@@ -1,0 +1,36 @@
+# Rank transfer under biological distribution shift — runtime dependencies.
+#
+# Versions are PINNED to the environment recorded in the frozen protocol
+# (artifacts/results/protocol/env.json), which is the environment every number
+# in the paper was produced under. Install with:
+#
+#     python -m venv .venv && source .venv/bin/activate
+#     pip install -r requirements.txt
+#     pip install -e .            # exposes the `fgbo` package from src/
+#
+# Python 3.10.18 on macOS/arm64 was used; any 3.10+ interpreter should work.
+
+# --- core numerics / training -------------------------------------------------
+torch==2.9.0
+numpy==1.26.4
+pandas==2.3.1
+scipy==1.15.3
+scikit-learn==1.7.1
+statsmodels==0.14.6
+
+# --- result storage (every run is written as a parquet row group) -------------
+pyarrow==12.0.1
+
+# --- benchmark data -----------------------------------------------------------
+PyTDC==1.1.15             # TDC: Caco-2, Lipophilicity, GDSC2 (auto-downloads)
+rdkit==2023.09.6          # Morgan fingerprints + Bemis-Murcko scaffold splits
+
+# --- sequential HPO arms (Phase 1B) ------------------------------------------
+HEBO==0.3.6               # GP-based search
+optuna==4.9.0             # TPE / random arms
+
+# --- figures ------------------------------------------------------------------
+matplotlib>=3.7
+
+# --- tests --------------------------------------------------------------------
+pytest>=7.4

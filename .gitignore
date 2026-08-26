@@ -1,0 +1,55 @@
+# ============================================================================
+# Everything under artifacts/ IS committed — that is the point of this repo.
+# The data and the per-run results are the artifact accompanying the paper.
+# Only genuinely regenerable caches and machine-local files are ignored.
+# ============================================================================
+
+# --- TDC's own download cache -----------------------------------------------
+# `DrugRes(name="gdsc2")` is called without a path argument, so PyTDC caches
+# into <cwd>/data/ when scripts are run from the repo root. ~112 MB, and PyTDC
+# re-downloads it automatically on first use. The molecule datasets (Caco-2,
+# Lipophilicity) DO chdir into artifacts/data/raw/ and are committed.
+/data/
+
+# --- model weights ----------------------------------------------------------
+# Training checkpoints are outputs, not inputs: nothing in the analysis or
+# figure pipeline reads them, and every run is reproducible from its seed.
+artifacts/results/checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# --- generated markdown summaries -------------------------------------------
+# scripts_icbinb/{sweep_all,make_metric_tables,analyze_*}.py render markdown
+# reports from the committed parquet files. Regenerate them; don't commit them.
+artifacts/results/summaries/
+
+# --- python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- environments -----------------------------------------------------------
+.venv/
+venv/
+env/
+
+# --- editor / OS / tooling --------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+.claude/
+
+# --- LaTeX build products ---------------------------------------------------
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
