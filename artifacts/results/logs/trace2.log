@@ -1,0 +1,21 @@
+protocol_hash=42554d911431f9de...  workers=6
+
+=== caco2_scaffold (5 outer runs x 48 candidates) ===
+  caco2_scaffold   outer005   48 rows    44.2s  diverged=0  median_train=0.0182
+
+=== cond7 (5 outer runs x 48 candidates) ===
+  cond7            outer001   48 rows   167.5s  diverged=0  median_train=0.0173
+  cond7            outer002   48 rows   174.6s  diverged=0  median_train=0.0199
+  cond7            outer003   48 rows   176.8s  diverged=0  median_train=0.0178
+  cond7            outer004   48 rows   178.7s  diverged=0  median_train=0.0176
+  cond7            outer005   48 rows   164.4s  diverged=0  median_train=0.0141
+
+=== hydro (5 outer runs x 48 candidates) ===
+  hydro            outer001   48 rows   437.7s  diverged=0  median_train=0.6720
+  hydro            outer002   48 rows   444.2s  diverged=0  median_train=0.6936
+  hydro            outer003   48 rows   435.3s  diverged=0  median_train=0.6729
+  hydro            outer004   48 rows   437.3s  diverged=0  median_train=0.6702
+  hydro            outer005   48 rows   414.4s  diverged=0  median_train=0.6623
+
+done: 528 trainings in 51.3 min
+TRACE EXPERIMENT COMPLETE Mon Aug 24 12:37:43 IST 2026

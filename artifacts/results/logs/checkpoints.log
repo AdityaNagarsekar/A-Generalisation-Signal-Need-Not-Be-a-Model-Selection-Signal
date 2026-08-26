@@ -1,0 +1,80 @@
+Found local copy...
+Loading...
+Done!
+Found local copy...
+Loading...
+Done!
+
+caco2_random: reproducing candidates [21, 19, 23, 3, 12] from outer001
+   cand 21  w=128  d=3  lr=1.3e-04  test=0.3399   epochs saved [25, 50, 100]   repro OK
+   cand 19  w=128  d=3  lr=1.9e-04  test=0.3473   epochs saved [25, 50, 100]   repro OK
+   cand 23  w=256  d=4  lr=7.7e-04  test=0.3491   epochs saved [25, 50, 100]   repro OK
+   cand  3  w=512  d=3  lr=1.7e-03  test=0.3096   epochs saved [25, 50, 100]   repro OK
+   cand 12  w=128  d=4  lr=8.6e-04  test=0.3250   epochs saved [25, 50, 100]   repro OK
+  0%|          | 0/910 [00:00<?, ?it/s] 29%|██▉       | 264/910 [00:00<00:00, 2626.81it/s] 69%|██████▉   | 629/910 [00:00<00:00, 3226.29it/s]100%|██████████| 910/910 [00:00<00:00, 3050.94it/s]
+Found local copy...
+Loading...
+Done!
+Found local copy...
+Loading...
+Done!
+
+caco2_scaffold: reproducing candidates [44, 28, 23, 46, 43] from outer001
+   cand 44  w=256  d=3  lr=1.1e-03  test=0.3437   epochs saved [25, 50, 100]   repro OK
+   cand 28  w=128  d=1  lr=1.2e-03  test=0.3504   epochs saved [25, 50, 100]   repro OK
+   cand 23  w=256  d=4  lr=7.7e-04  test=0.4622   epochs saved [25, 50, 100]   repro OK
+   cand 46  w=256  d=2  lr=1.8e-04  test=0.3132   epochs saved [25, 50, 100]   repro OK
+   cand 43  w=512  d=3  lr=2.8e-04  test=0.3604   epochs saved [25, 50, 100]   repro OK
+
+lipo_random: reproducing candidates [7, 3, 1, 34, 41] from outer001
+   cand  7  w=512  d=4  lr=2.0e-04  test=0.3984   epochs saved [25, 50, 100]   repro OK
+   cand  3  w=512  d=3  lr=1.7e-03  test=0.4073   epochs saved [25, 50, 100]   repro OK
+   cand  1  w=64   d=4  lr=1.5e-03  test=0.4512   epochs saved [25, 50, 100]   repro OK
+   cand 34  w=256  d=4  lr=1.6e-04  test=0.3972   epochs saved [25, 50, 100]   repro OK
+   cand 41  w=512  d=1  lr=3.0e-04  test=0.3928   epochs saved [25, 50, 100]   repro OK
+  0%|          | 0/4200 [00:00<?, ?it/s]  9%|▊         | 365/4200 [00:00<00:01, 3635.31it/s] 17%|█▋        | 729/4200 [00:00<00:00, 3502.03it/s] 26%|██▌       | 1080/4200 [00:00<00:00, 3488.30it/s] 34%|███▍      | 1429/4200 [00:00<00:00, 3165.15it/s] 42%|████▏     | 1750/4200 [00:00<00:00, 3155.06it/s] 49%|████▉     | 2075/4200 [00:00<00:00, 3180.23it/s] 57%|█████▋    | 2411/4200 [00:00<00:00, 3234.35it/s] 66%|██████▋   | 2786/4200 [00:00<00:00, 3388.73it/s] 75%|███████▍  | 3130/4200 [00:00<00:00, 3403.16it/s] 84%|████████▎ | 3509/4200 [00:01<00:00, 3518.80it/s] 92%|█████████▏| 3862/4200 [00:01<00:00, 3338.13it/s]100%|██████████| 4200/4200 [00:01<00:00, 3385.49it/s]
+Found local copy...
+Loading...
+Done!
+
+lipo_scaffold: reproducing candidates [31, 30, 26, 4, 24] from outer001
+   cand 31  w=256  d=1  lr=3.7e-04  test=0.5647   epochs saved [25, 50, 100]   repro OK
+   cand 30  w=64   d=1  lr=2.2e-03  test=0.6165   epochs saved [25, 50, 100]   repro OK
+   cand 26  w=64   d=4  lr=5.1e-04  test=0.6560   epochs saved [25, 50, 100]   repro OK
+   cand  4  w=256  d=4  lr=2.4e-04  test=0.5604   epochs saved [25, 50, 100]   repro OK
+   cand 24  w=512  d=2  lr=1.3e-03  test=0.5804   epochs saved [25, 50, 100]   repro OK
+  0%|          | 0/4200 [00:00<?, ?it/s]  8%|▊         | 342/4200 [00:00<00:01, 3409.19it/s] 16%|█▋        | 683/4200 [00:00<00:01, 3196.29it/s] 25%|██▍       | 1031/4200 [00:00<00:00, 3318.55it/s] 33%|███▎      | 1389/4200 [00:00<00:00, 3417.39it/s] 41%|████▏     | 1735/4200 [00:00<00:00, 3430.70it/s] 50%|█████     | 2102/4200 [00:00<00:00, 3507.81it/s] 59%|█████▉    | 2492/4200 [00:00<00:00, 3633.83it/s] 68%|██████▊   | 2856/4200 [00:00<00:00, 3589.54it/s] 77%|███████▋  | 3247/4200 [00:00<00:00, 3686.98it/s] 86%|████████▋ | 3623/4200 [00:01<00:00, 3707.93it/s] 95%|█████████▌| 3995/4200 [00:01<00:00, 3657.11it/s]100%|██████████| 4200/4200 [00:01<00:00, 3568.52it/s]
+Found local copy...
+Loading...
+Done!
+
+cond7: reproducing candidates [7, 30, 12, 36, 4] from outer001
+   cand  7  w=512  d=4  lr=2.0e-04  test=0.5382   epochs saved [25, 50, 100]   repro OK
+   cand 30  w=64   d=1  lr=2.2e-03  test=0.5824   epochs saved [25, 50, 100]   repro OK
+   cand 12  w=128  d=4  lr=8.6e-04  test=0.5994   epochs saved [25, 50, 100]   repro OK
+   cand 36  w=64   d=3  lr=7.8e-04  test=0.5983   epochs saved [25, 50, 100]   repro OK
+   cand  4  w=256  d=4  lr=2.4e-04  test=0.5333   epochs saved [25, 50, 100]   repro OK
+
+amylase: reproducing candidates [36, 45, 18, 17, 34] from outer001
+   cand 36  w=64   d=3  lr=7.8e-04  test=2.3143   epochs saved [25, 50, 100]   repro OK
+   cand 45  w=128  d=3  lr=9.5e-04  test=3.6052   epochs saved [25, 50, 100]   repro OK
+   cand 18  w=128  d=4  lr=1.6e-03  test=1.1440   epochs saved [25, 50, 100]   repro OK
+   cand 17  w=128  d=2  lr=3.0e-03  test=1.1454   epochs saved [25, 50, 100]   repro OK
+   cand 34  w=256  d=4  lr=1.6e-04  test=3.2644   epochs saved [25, 50, 100]   repro OK
+
+hydro: reproducing candidates [35, 37, 24, 26, 31] from outer001
+   cand 35  w=64   d=1  lr=1.5e-04  test=22.9344   epochs saved [25, 50, 100]   repro OK
+   cand 37  w=256  d=1  lr=4.3e-04  test=21.6048   epochs saved [25, 50, 100]   repro OK
+   cand 24  w=512  d=2  lr=1.3e-03  test=22.8224   epochs saved [25, 50, 100]   repro OK
+   cand 26  w=64   d=4  lr=5.1e-04  test=24.6227   epochs saved [25, 50, 100]   repro OK
+   cand 31  w=256  d=1  lr=3.7e-04  test=23.7146   epochs saved [25, 50, 100]   repro OK
+
+gdsc_drug: reproducing candidates [41, 4, 9, 35, 36] from outer001
+   cand 41  w=512  d=1  lr=3.0e-04  test=0.2882   epochs saved [25, 50, 100]   repro OK
+   cand  4  w=256  d=4  lr=2.4e-04  test=0.3455   epochs saved [25, 50, 100]   repro OK
+   cand  9  w=128  d=4  lr=2.7e-03  test=0.3090   epochs saved [25, 50, 100]   repro OK
+   cand 35  w=64   d=1  lr=1.5e-04  test=0.3015   epochs saved [25, 50, 100]   repro OK
+   cand 36  w=64   d=3  lr=7.8e-04  test=0.3173   epochs saved [25, 50, 100]   repro OK
+
+40 checkpoints written to /Users/adityanagarsekar/Downloads/Courses/LOP_Snehanshu/FGBO/results_icbinb/checkpoints
+exact reproductions: 40/40

@@ -45,8 +45,9 @@ env/
 .claude/
 
 # --- LaTeX build products ---------------------------------------------------
+# NOTE: no bare `*.log` here — it would swallow artifacts/results/logs/*.log,
+# which are the stdout transcripts of the long runs and ARE committed.
 *.aux
-*.log
 *.out
 *.synctex.gz
 *.bbl

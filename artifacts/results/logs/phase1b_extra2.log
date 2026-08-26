@@ -1,0 +1,99 @@
+clear - starting post-hoc Phase 1B Sun Aug 23 22:58:43 IST 2026
+
+==============================================================
+POST-HOC 1B: caco2_random   (2026-08-23 22:58:43)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=8
+done in 0.0 min
+--- caco2_random done (22:58:44) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: caco2_scaffold   (2026-08-23 22:58:52)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=8
+done in 0.0 min
+--- caco2_scaffold done (22:58:53) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: lipo_scaffold   (2026-08-23 22:59:00)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=8
+done in 0.0 min
+--- lipo_scaffold done (22:59:01) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: lipo_random   (2026-08-23 22:59:08)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=8
+done in 0.0 min
+--- lipo_random done (22:59:09) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: amylase   (2026-08-23 22:59:17)
+==============================================================
+Phase 1B: 90 jobs (8 to run) x 48 trials, workers=8
+/opt/anaconda3/envs/tf-ml-gpu/lib/python3.10/site-packages/optuna/_experimental.py:33: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  optuna_warn(
+/opt/anaconda3/envs/tf-ml-gpu/lib/python3.10/site-packages/optuna/_experimental.py:33: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  optuna_warn(
+/opt/anaconda3/envs/tf-ml-gpu/lib/python3.10/site-packages/optuna/_experimental.py:33: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  optuna_warn(
+/opt/anaconda3/envs/tf-ml-gpu/lib/python3.10/site-packages/optuna/_experimental.py:33: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  optuna_warn(
+/Users/adityanagarsekar/Downloads/Courses/LOP_Snehanshu/FGBO/icbinb/train.py:37: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = float(spearmanr(p, t).statistic) if len(t) > 2 and np.std(p) > 0 else float("nan")
+/Users/adityanagarsekar/Downloads/Courses/LOP_Snehanshu/FGBO/icbinb/train.py:37: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = float(spearmanr(p, t).statistic) if len(t) > 2 and np.std(p) > 0 else float("nan")
+/Users/adityanagarsekar/Downloads/Courses/LOP_Snehanshu/FGBO/icbinb/train.py:37: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = float(spearmanr(p, t).statistic) if len(t) > 2 and np.std(p) > 0 else float("nan")
+/Users/adityanagarsekar/Downloads/Courses/LOP_Snehanshu/FGBO/icbinb/train.py:37: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho = float(spearmanr(p, t).statistic) if len(t) > 2 and np.std(p) > 0 else float("nan")
+  hebo_val         amylase outer010  48 trials  1922.0s
+  tpe_val          amylase outer010  48 trials  2081.4s
+  tpe_hess_mo      amylase outer010  48 trials  2115.8s
+  hebo_hess_mo     amylase outer010  48 trials  2138.4s
+  tpe_penult_mo    amylase outer010  48 trials  2211.8s
+  tpe_fg_mo        amylase outer010  48 trials  2243.8s
+  hebo_penult_mo   amylase outer010  48 trials  2285.2s
+  hebo_fg_mo       amylase outer010  48 trials  2292.9s
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+done in 38.3 min
+--- amylase done (23:37:35) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+POST-HOC PHASE 1B COMPLETE Sun Aug 23 23:37:43 IST 2026

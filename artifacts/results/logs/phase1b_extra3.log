@@ -1,0 +1,43 @@
+clear - starting post-hoc Phase 1B Sun Aug 23 23:45:29 IST 2026
+
+==============================================================
+POST-HOC 1B: caco2_random   (2026-08-23 23:45:29)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=5
+done in 0.0 min
+--- caco2_random done (23:45:30) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: caco2_scaffold   (2026-08-23 23:45:39)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=5
+done in 0.0 min
+--- caco2_scaffold done (23:45:40) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: lipo_scaffold   (2026-08-23 23:45:48)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=5
+done in 0.0 min
+--- lipo_scaffold done (23:45:49) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: lipo_random   (2026-08-23 23:45:57)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=5
+done in 0.0 min
+--- lipo_random done (23:45:58) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+==============================================================
+POST-HOC 1B: amylase   (2026-08-23 23:46:06)
+==============================================================
+Phase 1B: 90 jobs (0 to run) x 48 trials, workers=5
+done in 0.0 min
+--- amylase done (23:46:07) ---
+wrote results_icbinb/summaries/RESULTS_MASTER.md
+
+POST-HOC PHASE 1B COMPLETE Sun Aug 23 23:46:15 IST 2026

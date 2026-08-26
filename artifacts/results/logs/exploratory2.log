@@ -1,0 +1,237 @@
+main run clear — starting exploratory Sat Aug 22 10:43:34 IST 2026
+
+==============================================================
+EXPLORATORY STAGE: shift_severity  (2026-08-22 10:43:34)
+==============================================================
+protocol_hash=42554d911431f9de...  workers=8
+
+=== shiftsev_caco2_a000 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_caco2_a025 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_caco2_a050 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_caco2_a075 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_caco2_a100 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_lipo_a000 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_lipo_a025 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_lipo_a050 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_lipo_a075 (10 outer runs x 48 candidates) ===
+
+=== shiftsev_lipo_a100 (10 outer runs x 48 candidates) ===
+
+done: 0 trainings in 0.0 min
+--- shift_severity finished (10:43:34) ---
+wrote results_icbinb/summaries/RESULTS_exploratory.md (63 lines)
+
+==============================================================
+EXPLORATORY STAGE: gdsc_phase1a  (2026-08-22 10:43:38)
+==============================================================
+protocol_hash=42554d911431f9de...  workers=8
+
+=== gdsc_drug (20 outer runs x 48 candidates) ===
+
+done: 0 trainings in 0.0 min
+--- gdsc_phase1a finished (10:43:38) ---
+wrote results_icbinb/summaries/RESULTS_exploratory.md (63 lines)
+
+==============================================================
+EXPLORATORY STAGE: gdsc_phase1b  (2026-08-22 10:43:41)
+==============================================================
+Phase 1B: 90 jobs (72 to run) x 48 trials, workers=8
+  hebo_val         gdsc_drug outer003  48 trials  2126.2s
+  tpe_hess_mo      gdsc_drug outer003  48 trials  2165.7s
+  hebo_penult_mo   gdsc_drug outer003  48 trials  2294.6s
+  tpe_fg_mo        gdsc_drug outer003  48 trials  2726.0s
+  tpe_val          gdsc_drug outer003  48 trials  2814.2s
+  hebo_hess_mo     gdsc_drug outer002  48 trials  2935.8s
+  tpe_penult_mo    gdsc_drug outer003  48 trials  2984.9s
+  hebo_fg_mo       gdsc_drug outer003  48 trials  3015.4s
+  random_val       gdsc_drug outer004  48 trials  2234.2s
+  tpe_val          gdsc_drug outer004  48 trials  2260.3s
+  hebo_hess_mo     gdsc_drug outer003  48 trials  2541.3s
+  hebo_val         gdsc_drug outer004  48 trials  2165.4s
+  tpe_fg_mo        gdsc_drug outer004  48 trials  2648.6s
+  hebo_penult_mo   gdsc_drug outer004  48 trials  2506.8s
+  hebo_fg_mo       gdsc_drug outer004  48 trials  2624.0s
+  tpe_penult_mo    gdsc_drug outer004  48 trials  2694.8s
+  tpe_hess_mo      gdsc_drug outer004  48 trials  1929.6s
+  random_val       gdsc_drug outer005  48 trials  2168.9s
+  hebo_hess_mo     gdsc_drug outer004  48 trials  2327.0s
+  tpe_val          gdsc_drug outer005  48 trials  2049.6s
+  hebo_val         gdsc_drug outer005  48 trials  2677.1s
+  tpe_penult_mo    gdsc_drug outer005  48 trials  2532.6s
+  hebo_fg_mo       gdsc_drug outer005  48 trials  2753.4s
+  tpe_fg_mo        gdsc_drug outer005  48 trials  2847.0s
+  random_val       gdsc_drug outer006  48 trials  2129.1s
+  tpe_hess_mo      gdsc_drug outer005  48 trials  2354.6s
+  hebo_penult_mo   gdsc_drug outer005  48 trials  2966.1s
+  hebo_hess_mo     gdsc_drug outer005  48 trials  2563.1s
+  tpe_val          gdsc_drug outer006  48 trials  2397.7s
+  hebo_val         gdsc_drug outer006  48 trials  2639.9s
+  hebo_fg_mo       gdsc_drug outer006  48 trials  2662.9s
+  tpe_fg_mo        gdsc_drug outer006  48 trials  2891.5s
+  hebo_hess_mo     gdsc_drug outer006  48 trials  2505.5s
+  hebo_penult_mo   gdsc_drug outer006  48 trials  2797.8s
+  tpe_hess_mo      gdsc_drug outer006  48 trials  2717.1s
+  tpe_penult_mo    gdsc_drug outer006  48 trials  3684.4s
+  random_val       gdsc_drug outer007  48 trials  2523.8s
+  tpe_val          gdsc_drug outer007  48 trials  2601.0s
+  tpe_fg_mo        gdsc_drug outer007  48 trials  2376.4s
+  hebo_val         gdsc_drug outer007  48 trials  2684.8s
+  tpe_penult_mo    gdsc_drug outer007  48 trials  2744.4s
+  hebo_penult_mo   gdsc_drug outer007  48 trials  2758.3s
+  hebo_fg_mo       gdsc_drug outer007  48 trials  2881.8s
+  tpe_hess_mo      gdsc_drug outer007  48 trials  2521.0s
+  hebo_hess_mo     gdsc_drug outer007  48 trials  2497.0s
+  random_val       gdsc_drug outer008  48 trials  2580.6s
+  hebo_val         gdsc_drug outer008  48 trials  2524.0s
+  tpe_val          gdsc_drug outer008  48 trials  3211.3s
+  hebo_fg_mo       gdsc_drug outer008  48 trials  2740.6s
+  tpe_penult_mo    gdsc_drug outer008  48 trials  2718.1s
+  tpe_hess_mo      gdsc_drug outer008  48 trials  2156.7s
+  tpe_fg_mo        gdsc_drug outer008  48 trials  3313.2s
+  hebo_penult_mo   gdsc_drug outer008  48 trials  2871.5s
+  random_val       gdsc_drug outer009  48 trials  2635.1s
+  tpe_val          gdsc_drug outer009  48 trials  2380.4s
+  hebo_hess_mo     gdsc_drug outer008  48 trials  3245.6s
+  hebo_val         gdsc_drug outer009  48 trials  2070.8s
+  tpe_fg_mo        gdsc_drug outer009  48 trials  2887.2s
+  hebo_fg_mo       gdsc_drug outer009  48 trials  3097.7s
+  tpe_penult_mo    gdsc_drug outer009  48 trials  2965.1s
+  hebo_penult_mo   gdsc_drug outer009  48 trials  2889.1s
+  tpe_hess_mo      gdsc_drug outer009  48 trials  2892.7s
+  hebo_hess_mo     gdsc_drug outer009  48 trials  2698.9s
+  random_val       gdsc_drug outer010  48 trials  2642.5s
+  hebo_val         gdsc_drug outer010  48 trials  1919.6s
+  tpe_val          gdsc_drug outer010  48 trials  2882.3s
+  tpe_fg_mo        gdsc_drug outer010  48 trials  2450.9s
+  hebo_fg_mo       gdsc_drug outer010  48 trials  2364.3s
+  tpe_hess_mo      gdsc_drug outer010  48 trials  1592.7s
+  tpe_penult_mo    gdsc_drug outer010  48 trials  2787.0s
+  hebo_hess_mo     gdsc_drug outer010  48 trials  1938.8s
+  hebo_penult_mo   gdsc_drug outer010  48 trials  2244.6s
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 9.999999999999999e-05
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+jitter = 1e-07
+jitter = 1e-06
+jitter = 9.999999999999999e-06
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.config import Config
+Config.warnings['not_compiled'] = False
+
+done in 400.7 min
+--- gdsc_phase1b finished (17:24:21) ---
+wrote results_icbinb/summaries/RESULTS_exploratory.md (63 lines)
+
+==============================================================
+EXPLORATORY COMPLETE  Sat Aug 22 17:24:25 IST 2026
+wrote results_icbinb/summaries/RESULTS_exploratory.md (63 lines)
