@@ -17,8 +17,6 @@ without retraining anything.
 
 ```
 .
-├── A_Generalisation_Signal_Need_Not_Be_a_Model_Selection_Signal/
-│                            paper LaTeX source + the 4 figures it uses
 ├── assets/                  project thumbnail + make_thumbnail.py
 ├── icbinb/                  study code: datasets, features, training, proxies,
 │                            candidate pool, sequential HPO, analysis
