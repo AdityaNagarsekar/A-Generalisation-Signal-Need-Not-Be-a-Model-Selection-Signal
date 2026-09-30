@@ -1,12 +1,13 @@
-# A Generalisation Signal Need Not Be a Model-Selecion Signal
+# A Generalisation Signal Need Not Be a Model-Selection Signal
 
-Code, data and per-run results for the ICBINB-BIO @ NeurIPS 2026 submission.
+Code, data and per-run results for the ICBINB-BIO @ NeurIPS 2026 paper (accepted,
+poster).
 
 The study asks a single question: **when a model pool is ranked by validation
 loss, does that ranking survive a biological distribution shift - and can a
 cheap geometric signal (activation energy, top Hessian eigenvalue, Hessian
 trace) repair it when it does not?** The reported answer is largely negative,
-and and all results in the paper are reproducible. Individual runs are
+and all results in the paper are reproducible. Individual runs are
 committed as parquet, so the analysis and the figures can be regenerated
 without retraining anything.
 
@@ -16,6 +17,9 @@ without retraining anything.
 
 ```
 .
+├── A_Generalisation_Signal_Need_Not_Be_a_Model_Selection_Signal/
+│                            paper LaTeX source + the 4 figures it uses
+├── assets/                  project thumbnail + make_thumbnail.py
 ├── icbinb/                  study code: datasets, features, training, proxies,
 │                            candidate pool, sequential HPO, analysis
 ├── src/fgbo/                MLP model + curvature proxies (installed package)
@@ -104,9 +108,14 @@ confirmatory runs and never edited since:
 
 Every confirmatory run script re-reads `protocol_hash.txt` and stamps it into
 its output, so a result file can always be traced to the protocol it ran under.
+All 59,712 stored result rows carry the frozen hash (checked by
+`scripts_icbinb/review_diagnostics.py`).
 
 **Pre-registered confirmatory family:** `cond7`, `caco2_scaffold`, `amylase`,
 `hydro`. `lipo_scaffold` was excluded in advance and is reported descriptively.
+`lipo_scaffold` and `caco2_scaffold` are built by the same TDC scaffold split,
+so the paper's Appendix B also reports the family with `lipo_scaffold` added,
+as a sensitivity analysis.
 Everything under `artifacts/results/exploratory/` is post-hoc by construction
 and is never used to support a confirmatory claim.
 
@@ -158,15 +167,57 @@ This is a multi-day run. The committed results let you skip it entirely.
 ```bash
 export PYTHONPATH=.:src
 ./scripts_icbinb/finish_section.sh      # regenerates every markdown analysis
-python3 scripts_icbinb/make_figures.py  # -> artifacts/results/figures/*.pdf
+python3 scripts_icbinb/make_figures.py  # -> artifacts/results/figures/{phase1a,phase1b}/
 python3 scripts_icbinb/sweep_all.py     # master results sweep
 python3 scripts_icbinb/make_metric_tables.py   # per-dataset tables
 python3 scripts_icbinb/make_appendix_tex.py    # LaTeX appendix tables
+python3 scripts_icbinb/review_diagnostics.py   # numbers added at camera-ready (see §6)
 ```
+
+The four figure PDFs the paper uses are kept in `artifacts/results/figures/`
+and in the paper's `figures/` folder. `make_appendix_tex.py` emits code
+identifiers; the paper's appendix tables rename them (§6) and state whether they
+use audited or unfiltered pools, so they were edited after generation.
 
 The markdown reports land in `artifacts/results/summaries/`, which is
 gitignored — they are rendered from the committed parquet, so they are outputs,
 not sources. This README is the only markdown checked in.
+
+---
+
+## 6. Reading the paper against the code
+
+Selector names in the paper map to code identifiers as follows (paper Appendix B,
+Table 3):
+
+| Paper | Code | Deploys the candidate with the lowest |
+|---|---|---|
+| Val | `val` | validation MSE |
+| Proxy | `fg_legacy` | layer-averaged activation proxy (the pre-registered primary signal) |
+| Proxy (pen.) | `fg_penult` | penultimate-layer activation proxy |
+| λmax | `hess_top` | top Hessian eigenvalue of the training MSE, over all weights and biases |
+| Val+Proxy, Val+Proxy (pen.), Val+λmax | `val+legacy`, `val+penult`, `val+hess` | rank sum of validation MSE and the signal |
+| Train | `train_mse` | training MSE |
+| #params | `n_params` | parameter count |
+| Random | `random(E)` | none: expected deployment loss of a uniform pick |
+| Oracle | `oracle` | deployment MSE (a bound, not a selector) |
+
+Ties go to the lowest `candidate_id`, which is the Latin-hypercube draw order.
+Figures label `cond7` as *Cond7* and `hydro` as *Hydro*.
+
+**Audited pools.** The post-hoc degeneracy audit drops a candidate if
+`pred_std_test < 1e-6` (a constant predictor) or `dead_relu_frac > 0.5` (more
+than half the hidden ReLU units are zero on every example of the training proxy
+subset). A replication with fewer than five surviving candidates would be
+dropped; none is. Primary inference in the paper uses the unfiltered pools.
+
+`scripts_icbinb/review_diagnostics.py` reproduces every number added to the
+appendix at camera-ready: intervals and ties for the confirmatory contrasts,
+which audit criterion removes the Amylase result, how often each selector
+deploys a constant predictor, the λmax floor of collapsed networks, the
+training-mean baseline, the epoch 50 to 100 training-loss change, audit
+retention, the Holm-family sensitivity analysis, and the NDCG definition. It
+reads only committed results and trains nothing.
 
 ---
 
@@ -178,10 +229,10 @@ Seven pre-registered conditions plus one exploratory:
 |---|---|---|
 | `lipo_random` / `lipo_scaffold` | TDC Lipophilicity (AstraZeneca) | random / Bemis–Murcko scaffold |
 | `caco2_random` / `caco2_scaffold` | TDC Caco-2 (Wang) | random / Bemis–Murcko scaffold |
-| `cond7` | TDC Caco-2 | scaffold split whose *validation set is also OOD* |
+| `cond7` | TDC Lipophilicity (AstraZeneca) | scaffold-disjoint test; train and validation re-split at random, so validation is in-distribution ("Lipophilicity mismatch" in the paper) |
 | `amylase` | FLIP2 amylase | close → far homology |
 | `hydro` | FLIP2 hydrophobic core (57-residue SH3 domain) | low → high |
-| `gdsc_drug` | TDC GDSC2 | leave-drug-out |
+| `gdsc_drug` | TDC GDSC2 | leave-drug-out (exploratory) |
 
 ---
 

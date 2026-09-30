@@ -243,7 +243,7 @@ def fig4():
         ax.tick_params(length=2)
     axes[0].set_ylabel("test MSE")
     axes[0].legend(frameon=False, loc="upper left", handletextpad=0.3, borderpad=0.1)
-    fig.suptitle("Every tracked signal is minimised by a network that does nothing",
+    fig.suptitle("Collapse is rewarded on Amylase but not on Hydrophobic Core",
                  fontsize=8.5, y=1.02)
     fig.tight_layout()
     save(fig, "fig4_degeneracy")
